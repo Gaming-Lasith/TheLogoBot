@@ -1,9 +1,9 @@
 FROM python:3.9.6
 
-WORKDIR /lasith
-COPY . /lasith
+WORKDIR /stdlogo
+COPY . /stdlogo
  
 RUN pip install -r requirements.txt
  
 ENTRYPOINT ["python"]
-CMD ["-m", "lasith"]
+CMD ["-m", "stdlogo"]
