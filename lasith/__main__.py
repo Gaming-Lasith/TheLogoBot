@@ -67,19 +67,19 @@ STARTBTNS = InlineKeyboardMarkup(
 
 START_IMG = "https://telegra.ph/file/e0a135d44f34933616069.jpg
 
-@lasith.on_message(filters.private & filters.incoming & filters.command(["start"]))
+@stdlogo.on_message(filters.private & filters.incoming & filters.command(["start"]))
 async def startmsg(_, message):
   await message.reply_photo(photo=START_IMG, 
     caption=STARTTEXT,
     reply_markup=STARTBTNS
   )
 
-@lasith.on_message(filters.private & filters.incoming & filters.command(["help"]))
+@stdlogo.on_message(filters.private & filters.incoming & filters.command(["help"]))
 async def startmsg(_, message):
   await message.reply_photo(photo=START_IMG, 
     caption=HELPTEXT,
     reply_markup=HELPBTNS
   )
-lasith.start()
-LOGGER.info("'Amazing Logo Bot is online!")
+stdlogo.start()
+LOGGER.info("STD Logo Bot is online!")
 idle()
