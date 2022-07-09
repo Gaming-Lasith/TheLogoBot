@@ -1,1 +1,1 @@
-worker: python -m stdlogo
+worker: python -m lasith
