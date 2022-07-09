@@ -1,4 +1,4 @@
-@stdlogo.on_message(filters.command("mask") & ~filters.forwarded)
+@bot.on_message(filters.command("mask") & ~filters.forwarded)
 async def logomake(_, message: Message):
     if len(message.command) != 2:
         return await message.reply_text("Please give a text.\nEx:`/logo Name` ")
